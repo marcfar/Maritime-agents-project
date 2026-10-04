@@ -1,0 +1,124 @@
+{
+  "findings": [
+    {
+      "claim": "China handled by far the most container port traffic of any country in 2019 (TEU).",
+      "metric": "value",
+      "indicator": "IS.SHP.GOOD.TU",
+      "country_code": "CHN",
+      "year": 2019,
+      "number": 237570000,
+      "expected": 237570000.0,
+      "status": "ok"
+    },
+    {
+      "claim": "China also has the best liner shipping connectivity index of any country in 2019.",
+      "metric": "value",
+      "indicator": "IS.SHP.GCNW.XQ",
+      "country_code": "CHN",
+      "year": 2019,
+      "number": 158.6153205517,
+      "expected": 158.62,
+      "status": "ok"
+    },
+    {
+      "claim": "Across countries, container traffic and liner connectivity rankings are very closely aligned in 2019, the latest year with data for both (Spearman rank correlation).",
+      "metric": "spearman_corr",
+      "indicator": "IS.SHP.GOOD.TU vs IS.SHP.GCNW.XQ",
+      "year": 2019,
+      "number": 0.924,
+      "expected": 0.92,
+      "status": "ok"
+    },
+    {
+      "claim": "Qatar had the fastest container traffic growth between 2015 and 2019 among countries with at least 500,000 TEU at the start (percent).",
+      "metric": "growth_pct",
+      "indicator": "IS.SHP.GOOD.TU",
+      "country_code": "QAT",
+      "start_year": 2015,
+      "end_year": 2019,
+      "number": 135.85,
+      "expected": 135.85,
+      "status": "ok"
+    },
+    {
+      "claim": "Venezuela's container traffic fell the most between 2015 and 2019 among countries with at least 500,000 TEU at the start (percent).",
+      "metric": "growth_pct",
+      "indicator": "IS.SHP.GOOD.TU",
+      "country_code": "VEN",
+      "start_year": 2015,
+      "end_year": 2019,
+      "number": -56.71,
+      "expected": -56.71,
+      "status": "ok"
+    },
+    {
+      "claim": "Qatar's liner shipping connectivity index grew fastest of all countries between 2015 and 2019 (index of at least 10 at the start; percent), though from a low base.",
+      "metric": "growth_pct",
+      "indicator": "IS.SHP.GCNW.XQ",
+      "country_code": "QAT",
+      "start_year": 2015,
+      "end_year": 2019,
+      "number": 225.33,
+      "expected": 225.33,
+      "status": "ok"
+    },
+    {
+      "claim": "Bahrain's liner shipping connectivity fell the most between 2015 and 2019 among countries with an index of at least 10 at the start (percent).",
+      "metric": "growth_pct",
+      "indicator": "IS.SHP.GCNW.XQ",
+      "country_code": "BHR",
+      "start_year": 2015,
+      "end_year": 2019,
+      "number": -56.56,
+      "expected": -56.56,
+      "status": "ok"
+    },
+    {
+      "claim": "Sweden is the best connected of the Nordic countries in 2019 on the liner shipping connectivity index, well behind the global leaders.",
+      "metric": "value",
+      "indicator": "IS.SHP.GCNW.XQ",
+      "country_code": "SWE",
+      "year": 2019,
+      "number": 48.9645093684,
+      "expected": 48.96,
+      "status": "ok"
+    },
+    {
+      "claim": "Finland moves about as much container traffic as Sweden but its connectivity index is far lower in 2019, so its position differs clearly between the two indicators.",
+      "metric": "value",
+      "indicator": "IS.SHP.GCNW.XQ",
+      "country_code": "FIN",
+      "year": 2019,
+      "number": 14.7876564838,
+      "expected": 14.79,
+      "status": "ok"
+    },
+    {
+      "claim": "Indonesia is among the largest container handlers but its connectivity index in 2019 is only moderate, so it ranks much better on traffic than on connectivity.",
+      "metric": "value",
+      "indicator": "IS.SHP.GCNW.XQ",
+      "country_code": "IDN",
+      "year": 2019,
+      "number": 45.663150413,
+      "expected": 45.66,
+      "status": "ok"
+    },
+    {
+      "claim": "France has relatively well-developed liner connectivity in 2019 compared with its mid-sized container traffic (TEU), so it ranks better on connectivity than on traffic.",
+      "metric": "value",
+      "indicator": "IS.SHP.GOOD.TU",
+      "country_code": "FRA",
+      "year": 2019,
+      "number": 4992918,
+      "expected": 4992918.0,
+      "status": "ok"
+    }
+  ],
+  "caveats": [
+    "Latest year with data for both indicators is 2019: container traffic is empty for 2020 onward in the tool, so the 2015\u20132019 comparison is the most recent window; the LSCI continues to 2021 but is not comparable with traffic after 2019.",
+    "Growth was computed using min_start_value filters (500,000 TEU for traffic; index of 10 for connectivity), so small-base countries were excluded; Qatar's connectivity growth still starts from a low base.",
+    "Rank differences between indicators were judged from the top-30 lists for 2019 plus country series, not from a full ranking of all countries; Nordic values for Norway, Denmark and Iceland are low-to-moderate on connectivity and rising for traffic but are not given as separate findings.",
+    "Panel is unbalanced and excludes landlocked or non-reporting countries; TEU values depend on national reporting and were not checked for outliers. LSCI comparability across years is unverified.",
+    "The Spearman correlation covers 161 countries and measures rank association only, not causation."
+  ]
+}
